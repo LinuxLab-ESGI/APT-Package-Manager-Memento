@@ -10,47 +10,65 @@ Debian distors uses a packaging sytem called **dpkg** (Debian package). It provi
 
 ## Update package database
 
+APT works on database of available packages, we have to update the repository of packages to know if thery are newer packages.  
+It will check all repository in **/etc/apt/source.list**. It is a command to do before installing or updating a program :
+
 `sudo apt update`
 
 ## Update installed packages
 
+Now we can upgrade all installed packages :
+
 `sudo apt upgrade`
+
+We can combine the two commands with `&&`, with `-y` to say yes we want to upgrade all the packages :
 
 `sudo apt update && sudo apt upgrade -y`
 
+We can use `full-upgrade` to let APT remove all the necessary packages :
+
+`sudo apt full-upgrade`
+
 ## Install new packages
 
-`sudo apt install <package_name>`
-`sudo apt install <package_name> <package_name2>`
+To install a package :
+`sudo apt install package_name`  
+Or multiple packages :
+`sudo apt install packageName <packageName2`
 
 Install without upgrading :  
-`sudo apt install <package_name> --no-upgrade`
+`sudo apt install packageName --no-upgrade` (Don't want to upgrade if it's installed)
 
 Install only upgrading :  
-`sudo apt install <package_name> --only-upgrade`
+`sudo apt install packageName --only-upgrade` (Don't want to install if it's not upgradable)
 
-Install with specific version number :
-`sudo apt install <package_name>=<version_number>`
+Install with specific version number (the latest is intalled by default) :
+`sudo apt install packageName=versionNumber`
 
 If we downloaded a **.deb** file, we can install it with :  
 `sudo dpkg -i fichier.deb`
 `sudo apt install -f` (sintalling dependencies)
 Or :
-`sudo apt install ./fichier.deb`
+`sudo apt install fichier.deb`
 
 ## Remove packages
 
-`sudo apt remove <package_name>`
-`sudo apt purge <package_name>`
+`sudo apt remove packageName` (removes only binaries)  
+`sudo apt autoremove` (removes binaries and dependencies if it's not used)  
+`sudo apt purge packageName` (removes binaries and files configurations)
 
 ## Search for some informations
 
-`apt search <search term>`
-`apt show <package_name>`
-`apt list --upgradeable`
-`apt list --installed`
+`apt search packageName` (searhc a package)
+`apt show packageName` (search a package by a name or its description)
+`apt list --upgradeable`(list upgradable packages)
+`apt list --installed` (list installed packages)
 
 ## Clean system
 
-`sudo apt autoremove`
+`sudo apt autoremove` (removes unused dependencies)
+`sudo apt clean` (removes oudated cache)
+`sudo apt autoclean` (removes cache)
 
+___
+Author : AnthonyF
