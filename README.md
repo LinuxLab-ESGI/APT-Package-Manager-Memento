@@ -47,8 +47,8 @@ Install with specific version number (the latest is intalled by default) :
 
 If we downloaded a **.deb** file, we can install it with :  
 `sudo dpkg -i fichier.deb`
-`sudo apt install -f` (sintalling dependencies)
-Or :
+`sudo apt install -f` (sintalling dependencies)  
+Or :  
 `sudo apt install fichier.deb`
 
 ## Remove packages
@@ -59,15 +59,15 @@ Or :
 
 ## Search for some informations
 
-`apt search packageName` (searhc a package)
-`apt show packageName` (search a package by a name or its description)
-`apt list --upgradeable`(list upgradable packages)
+`apt search packageName` (searhc a package)  
+`apt show packageName` (search a package by a name or its description)  
+`apt list --upgradeable`(list upgradable packages)  
 `apt list --installed` (list installed packages)
 
 ## Clean system
 
-`sudo apt autoremove` (removes unused dependencies)
-`sudo apt clean` (removes oudated cache)
+`sudo apt autoremove` (removes unused dependencies)  
+`sudo apt clean` (removes oudated cache)  
 `sudo apt autoclean` (removes cache)
 
 ___
