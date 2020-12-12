@@ -46,7 +46,7 @@ Install with specific version number (the latest is intalled by default) :
 `sudo apt install packageName=versionNumber`
 
 If we downloaded a **.deb** file, we can install it with :  
-`sudo dpkg -i fichier.deb`
+`sudo dpkg -i fichier.deb`  
 `sudo apt install -f` (sintalling dependencies)  
 Or :  
 `sudo apt install fichier.deb`
@@ -61,7 +61,7 @@ Or :
 
 `apt search packageName` (searhc a package)  
 `apt show packageName` (search a package by a name or its description)  
-`apt list --upgradeable`(list upgradable packages)  
+`apt list --upgradeable` (list upgradable packages)  
 `apt list --installed` (list installed packages)
 
 ## Clean system
