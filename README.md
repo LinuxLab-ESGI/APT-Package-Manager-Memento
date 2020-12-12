@@ -31,9 +31,9 @@ We can use `full-upgrade` to let APT remove all the necessary packages :
 
 ## Install new packages
 
-To install a package :
+To install a package :  
 `sudo apt install package_name`  
-Or multiple packages :
+Or multiple packages :  
 `sudo apt install packageName <packageName2`
 
 Install without upgrading :  
@@ -42,7 +42,7 @@ Install without upgrading :
 Install only upgrading :  
 `sudo apt install packageName --only-upgrade` (Don't want to install if it's not upgradable)
 
-Install with specific version number (the latest is intalled by default) :
+Install with specific version number (the latest is intalled by default) :  
 `sudo apt install packageName=versionNumber`
 
 If we downloaded a **.deb** file, we can install it with :  
