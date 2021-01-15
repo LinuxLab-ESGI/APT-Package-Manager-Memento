@@ -47,9 +47,7 @@ Install with specific version number (the latest is intalled by default) :
 
 If we downloaded a **.deb** file, we can install it with :  
 `sudo dpkg -i fichier.deb`  
-`sudo apt install -f` (sintalling dependencies)  
-Or :  
-`sudo apt install fichier.deb`
+`sudo apt install -f` (intalling dependencies)  
 
 ## Remove packages
 
